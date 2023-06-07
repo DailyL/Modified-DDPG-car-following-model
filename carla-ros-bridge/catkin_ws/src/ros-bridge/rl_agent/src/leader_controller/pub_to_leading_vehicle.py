@@ -29,14 +29,8 @@ import rospkg
 rospack = rospkg.RosPack()
 current_path = rospack.get_path('rl_agent')
 
-
-
-# get config 
-parser = argparse.ArgumentParser()
-parser.add_argument("-d", "--leader_profile", help="Which leader speed profile will be used for evaluation.", type=str, default="Napoli")
-args = parser.parse_args()
-
-leader_speed = args.leader_profile
+# get config
+leader_speed = rospy.get_param('/ddpg/mode')
 vl = []
 
 if leader_speed == "napoli":

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
+<param name="mode" default="Napoli" doc="which leader profile used for evaluation" /> 
  <node name="pub_to_leading" pkg="rl_agent" type="pub_to_leading_vehicle.py">
  <param name="path" value="$(find rl_agent)/src/" />
+ <arg name="mode" default="$(arg mode)"/>
 </node>
 </launch>

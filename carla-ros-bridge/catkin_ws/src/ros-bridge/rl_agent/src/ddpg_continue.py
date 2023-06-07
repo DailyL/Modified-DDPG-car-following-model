@@ -10,7 +10,7 @@ import tensorflow.compat.v1 as tf
 from tensorflow.keras import layers, models
 import json
 from ou_noise import OUNoise
-from ReplayBuffer import ReplayBuffer
+from ReplayBuffer_from_Napoli import ReplayBuffer
 from ActorNetwork import ActorNetwork
 from CriticNetwork import CriticNetwork
 from CarlaGame import CarlaGame
@@ -26,7 +26,13 @@ rospack = rospkg.RosPack()
 current_path = rospack.get_path('rl_agent')
 
 
-def playGame(train_indicator=0):    #1 means Train, 0 means simply Run
+"""
+model path of the trained ddpg agent, used for continue training
+"""
+trained_model_path = current_path + "/src/model/"
+
+
+def playGame(train_indicator = 1):    #1 means Train, 0 means simply Run
     BUFFER_SIZE = 2000
     BATCH_SIZE = 64
     GAMMA = 0.95
@@ -36,7 +42,6 @@ def playGame(train_indicator=0):    #1 means Train, 0 means simply Run
 
     action_dim = 1  #num of action dim
     state_dim = 4  #num of features in state
-
     load_weight = True
     EXPLORE = 4000.0*15000
     episode_count = 4100 if (train_indicator) else 1
@@ -65,10 +70,10 @@ def playGame(train_indicator=0):    #1 means Train, 0 means simply Run
     if load_weight :#Now load the weight
         print("Now we load the weight")
         try:
-            actor.model.load_weights(current_path + "/src/model/model_for_pure_ddpg_continue/actormodel.h5")
-            critic.model.load_weights(current_path + "/src/model/model_for_pure_ddpg_continue/criticmodel.h5")
-            actor.target_model.load_weights(current_path + "/src/model/model_for_pure_ddpg_continue/actormodel.h5")
-            critic.target_model.load_weights(current_path + "/src/model/model_for_pure_ddpg_continue/criticmodel.h5")
+            actor.model.load_weights(trained_model_path + "actormodel.h5")
+            critic.model.load_weights(trained_model_path + "criticmodel.h5")
+            actor.target_model.load_weights(trained_model_path + "actormodel.h5")
+            critic.target_model.load_weights(trained_model_path + "criticmodel.h5")
             print("Weight load successfully")
         except:
             print("Cannot find the weight")
@@ -148,6 +153,11 @@ def playGame(train_indicator=0):    #1 means Train, 0 means simply Run
         if np.mod(i, 5) == 0:
             if (train_indicator):
                 print("Now we save model")
+                
+                """
+                save the improved model to "model_for_pure_ddpg_continue" folder
+                """
+
                 actor.model.save_weights(current_path + "/src/model/model_for_pure_ddpg_continue/actormodel.h5", overwrite=True)
                 critic.model.save_weights(current_path + "/src/model/model_for_pure_ddpg_continue/criticmodel.h5", overwrite=True)
         
