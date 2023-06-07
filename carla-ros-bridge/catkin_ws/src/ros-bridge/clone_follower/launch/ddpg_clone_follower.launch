@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
- <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge.launch"/>
- <include file="$(find carla_ackermann_control)/launch/carla_ackermann_control.launch"/>
- <include file="$(find carla_spawn_objects)/launch/carla_spawn_objects_hero3.launch"/>
- <include file="$(find carla_spawn_objects)/launch/carla_spawn_objects_hero4.launch"/>
- <node name="ddpg_clone_follower" pkg="clone_follower" type="ddpg_pub.py" output="screen">
- </node>
-</launch>

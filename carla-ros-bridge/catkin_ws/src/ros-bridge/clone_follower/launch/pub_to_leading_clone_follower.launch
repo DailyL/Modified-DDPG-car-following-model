@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
- <node name="leading_clone_follower" pkg="clone_follower" type="pub_to_leading_with_NN_2layer.py">
- <param name="path" value="$(find clone_follower)/src/" />
-</node>
-</launch>
