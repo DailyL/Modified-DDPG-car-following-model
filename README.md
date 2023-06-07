@@ -21,7 +21,7 @@ In the autonomous driving field, fusion of human knowledge into Deep Reinforceme
 
 
 ## Installation
-### This repo is a CARLA-ROS Bridge package with modification by the author (RL algorithm). By cloning this repo, replace the official CARLA-ROS Bridge package, but you need to setup to make it runs on your local machine.
+### This repo is a CARLA-ROS Bridge package with modification by the author (RL algorithm). By cloning this repo, replace the official CARLA-ROS Bridge package, but you need to set it up to make it runs on your local machine.
 
 * First, clone this repo to your local machine:
 
