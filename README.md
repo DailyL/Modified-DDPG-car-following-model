@@ -56,7 +56,7 @@ To change the speed profile of the **leading vehicle**, change the parameter in 
 ```
 ## Evaluation
 
-For evaluation, simple change the training_indicator in [python script](Modified-DDPG-car-following-model/carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/src/ddpg.py) into 0, and then run 
+For evaluation, simple change the training_indicator in [python script](carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/src/ddpg.py) into 0, and then run 
 
 ```bash
 roslaunch rl_agent ddpg.launch
