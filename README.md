@@ -12,7 +12,7 @@ In the autonomous driving field, fusion of human knowledge into Deep Reinforceme
 
 ## Prerequisites
 
-* Operating System: Ubuntu 18.04 or 20.04
+* Operating System: Ubuntu 18.04 (or 20.04)
 * [ROS (Melodic or Noetic)](http://wiki.ros.org/noetic/Installation/Ubuntu)
 * Programming Language: Python 2 (Python 3 for ROS Noetic)
 * [CARLA 0.9.11](https://carla.readthedocs.io/en/0.9.11/) (other version might also work, but this work used 0.9.11)
