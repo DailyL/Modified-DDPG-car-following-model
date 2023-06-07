@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+ <node name="pub_to_leading" pkg="rl_agent" type="pub_to_leading_vehicle.py">
+ <param name="path" value="$(find rl_agent)/src/" />
+</node>
+</launch>

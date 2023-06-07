@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+ <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge.launch"/>
+ <include file="$(find carla_spawn_objects)/launch/carla_spawn_objects_hero3.launch"/>
+<include file="$(find clone_follower)/launch/pub_to_leading_clone_follower.launch"/>
+
+</launch>

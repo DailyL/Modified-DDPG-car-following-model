@@ -1,0 +1,41 @@
+{   
+    "objects": 
+    [
+        {
+            "type": "sensor.pseudo.traffic_lights",
+            "id": "traffic_lights"
+        },
+        {
+            "type": "sensor.pseudo.objects",
+            "id": "objects"
+        },
+        {
+            "type": "sensor.pseudo.actor_list",
+            "id": "actor_list"
+        },
+        {
+            "type": "sensor.pseudo.markers",
+            "id": "markers"
+        },
+        {
+            "type": "sensor.pseudo.opendrive_map",
+            "id": "map"
+        },
+        {
+            "type": "vehicle.mercedes-benz.coupe",
+            "id": "hero1",
+            "sensors": 
+            [
+                {
+                    "type": "sensor.other.collision",
+                    "id": "collision",
+                    "spawn_point": {"x": 0.0, "y": 0.0, "z": 0.0}
+                },
+                {
+                    "type": "sensor.pseudo.odom",
+                    "id": "odometry"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+ <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge.launch"/>
+ <include file="$(find carla_spawn_objects)/launch/carla_spawn_objects_hero1.launch"/>
+ <include file="$(find carla_spawn_objects)/launch/carla_spawn_objects_hero2.launch"/>
+ <include file="$(find rl_agent)/launch/pub_to_leading_vehicle.launch"/>
+ <node name="ddpg" pkg="rl_agent" type="ddpg_continue.py" output="screen">
+ </node>
+</launch>

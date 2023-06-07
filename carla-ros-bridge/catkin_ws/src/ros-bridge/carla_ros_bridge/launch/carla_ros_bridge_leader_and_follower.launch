@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+ <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge_with_hero1.launch"/>
+ <include file="$(find carla_ros_bridge)/launch/carla_ros_bridge_with_hero2.launch"/>
+</launch>

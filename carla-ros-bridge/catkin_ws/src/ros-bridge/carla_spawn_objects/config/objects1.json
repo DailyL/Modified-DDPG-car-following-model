@@ -1,0 +1,57 @@
+{   
+    "objects": 
+    [
+        {
+            "type": "sensor.pseudo.objects",
+            "id": "objects"
+        },
+        {
+            "type": "sensor.pseudo.actor_list",
+            "id": "actor_list"
+        },
+        {
+            "type": "sensor.pseudo.opendrive_map",
+            "id": "map"
+        },
+        {
+            "type": "vehicle.mercedes-benz.coupe",
+            "id": "hero1",
+            "spawn_point": {"x": -9985, "y": 0.0, "z": 1.0, "roll": 0.0, "pitch": 0.0, "yaw": 0.0},
+            "sensors": 
+            [
+                {
+                    "type": "sensor.other.collision",
+                    "id": "collision",
+                    "spawn_point": {"x": 0.0, "y": 0.0, "z": 0.0}
+                },
+                {
+                    "type": "sensor.camera.rgb",
+                    "id": "rgb_view",
+                    "spawn_point": {"x": -4.5, "y": 0.0, "z": 2.8, "roll": 0.0, "pitch": 20.0, "yaw": 0.0},
+                    "image_size_x": 800,
+                    "image_size_y": 600,
+                    "fov": 90.0,
+                    "attached_objects":
+                    [
+                        {
+                            "type": "actor.pseudo.control",
+                            "id": "control"
+                        }
+                    ]
+                },
+                {
+                    "type": "sensor.pseudo.objects",
+                    "id": "objects"
+                },
+                {
+                    "type": "sensor.pseudo.odom",
+                    "id": "odometry"
+                },
+                {
+                    "type": "actor.pseudo.control",
+                    "id": "control"
+                }
+            ]
+        }
+    ]
+}
