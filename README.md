@@ -2,12 +2,6 @@
 
 ## About the work
 
-Deep Reinforcement Learning (DRL) has shown remarkable success in solving complex tasks across various research fields. However, transferring DRL agents to the real world is still challenging due to the significant discrepancies between simulation and reality. To address this issue, we propose a robust DRL framework that leverages platform-dependent perception modules to extract task-relevant information and train a lane-following and overtaking agent in simulation. This framework facilitates the seamless transfer of the DRL agent to new simulated environments and the real world with minimal effort. We evaluate the performance of the agent in various driving scenarios in both simulation and the real world, and compare it to human players and the PID baseline in simulation. Our proposed framework significantly reduces the gaps between different platforms and the Sim2Real gap, enabling the trained agent to achieve similar performance in both simulation and the real world, driving the vehicle effectively.
+In the autonomous driving field, fusion of human knowledge into Deep Reinforcement Learning (DRL) is often based on the human demonstration recorded in a simulated environment. This limits the generalization and the feasibility of application in real-world traffic. We propose a two-stage DRL method to train a car-following agent, that modifies the policy by leveraging the real-world human driving experience and achieves performance superior to the pure DRL agent. Training a DRL agent is done within CARLA framework with Robot Operating System (ROS). For evaluation, we designed different driving scenarios to compare the proposed two-stage DRL car-following agent with other agents. After extracting the “good” behavior from the human driver, the agent becomes more efficient and reasonable, which makes this autonomous agent more suitable to Human–Robot Interaction (HRI) traffic.
 
-<p align = "center">
-<img src="/assets/overall_system_hor.jpg" width="600">
-</p>
-
-
-[Project website](https://dailyl.github.io/sim2realVehicle.github.io/)   
-[Paper](https://arxiv.org/abs/2304.08235)
+[Paper](https://www.sciencedirect.com/science/article/abs/pii/S0968090X22004004)
