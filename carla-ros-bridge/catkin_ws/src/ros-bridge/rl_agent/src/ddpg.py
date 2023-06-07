@@ -19,6 +19,7 @@ import rospy
 import time
 import os
 import argparse
+import rospkg
 
 timestr = time.strftime("%Y%m%d-%H%M%S")
 rospack = rospkg.RosPack()
