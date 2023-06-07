@@ -1,0 +1,8 @@
+prefix=/home/dianzhaoli/carla-ros-bridge/catkin_ws/devel
+
+Name: rl_agent_per
+Description: Description of rl_agent_per
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

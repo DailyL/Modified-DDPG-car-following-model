@@ -1,0 +1,8 @@
+prefix=/home/dianzhaoli/carla-ros-bridge/catkin_ws/install
+
+Name: rl_carla
+Description: Description of rl_carla
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

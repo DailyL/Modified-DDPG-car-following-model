@@ -1,0 +1,8 @@
+prefix=/home/dianzhaoli/carla-ros-bridge/catkin_ws/install
+
+Name: bc_with_napoli
+Description: Description of bc_with_napoli
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
