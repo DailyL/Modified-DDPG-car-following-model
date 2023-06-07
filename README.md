@@ -40,7 +40,7 @@ Then start to train the pure DDPG agent:
 ```bash
 roslaunch rl_agent ddpg.launch
 ```
-The weights will be saved in [model folder](https://github.com/DailyL/Modified-DDPG-car-following-model/carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/src/model).
+The weights will be saved in [model folder](carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/src/model).
 
 * For continue training:
 
@@ -49,7 +49,7 @@ roslaunch rl_agent ddpg_continue.launch
 ```
 
 The Napoli dataset used for continued training is already converted into pickle file.
-To change the speed profile of the **leading vehicle**, change the parameter in [launch file](https://github.com/DailyL/Modified-DDPG-car-following-model/carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/launch).
+To change the speed profile of the **leading vehicle**, change the parameter in [launch file](carla-ros-bridge/catkin_ws/src/ros-bridge/rl_agent/launch).
 
 ```bash
 <param name="mode" default="napoli" doc="which leader profile used for evaluation (napoli;ngsim;or self_defined)" /> 
